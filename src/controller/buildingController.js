@@ -5,6 +5,7 @@ const buildingController = {}
 buildingController.post = async (req, res) => {
     const data = req.body
     data.ownerId = req.token.id
+    data.image = req.file.filename
     try {
         const result = await buildingService.post(data)
         return res.json(result)

@@ -4,9 +4,10 @@ import tokenValidation from '../middlewares/tokenValidation.js'
 
 const roomRouter = Router()
 
-roomRouter.get('/pg/rooms', tokenValidation, roomController.get)
-roomRouter.post('/pg/rooms', tokenValidation, roomController.post)
-roomRouter.delete('/pg/rooms/:id', tokenValidation, roomController.delete)
+roomRouter.get('/pg/building/:id/rooms', tokenValidation, roomController.get)
+roomRouter.post('/pg/building/:id/rooms', tokenValidation, roomController.post)
+roomRouter.delete('/pg/building/:b_id/room/:r_id', tokenValidation, roomController.delete)
+roomRouter.put('/pg/building/:b_id/room/:r_id', tokenValidation, roomController.put)
 
 //tenant perspective
 roomRouter.get('/pg/allrooms', roomController.getAll)

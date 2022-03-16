@@ -10,7 +10,7 @@ const DATABASE = process.env.DATABASE
 
 const connectToDatabase = async () => {
     try {
-        await mongoose.connect(`mongodb+srv://${USER}:${PASSWORD}@cluster0.lajoo.mongodb.net/${DATABASE}?retryWrites=true&w=majority`)
+        await mongoose.connect(`mongodb+srv://root1314:${PASSWORD}@cluster0.lajoo.mongodb.net/${DATABASE}?retryWrites=true&w=majority`)
         console.log("conneccted to database")
     } catch (err) {
         console.log(err)

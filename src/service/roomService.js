@@ -8,13 +8,18 @@ roomService.post = async (data) => {
     return result
 }
 
-roomService.get = async (ownerId) => {
-    const result = await roomRepositary.get(ownerId)
+roomService.get = async (ownerId, buildingId) => {
+    const result = await roomRepositary.get(ownerId, buildingId)
     return result
 }
 
 roomService.delete = async (id) => {
     const result = await roomRepositary.delete(id)
+    return result
+}
+
+roomService.put = async (id,data) => {
+    const result = await roomRepositary.put(id,data)
     return result
 }
 

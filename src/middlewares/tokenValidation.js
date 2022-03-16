@@ -6,7 +6,7 @@ const SECRETKEY = process.env.SECRETKEY
 
 const tokenValidation = (req, res, next) => {
     const token = req.headers["x-auth"]
-    if (!token) return res.json('token is required')
+    if (!token)  return res.json('token is required')
     try {
         const verified = jwt.verify(token, SECRETKEY)
         // console.log(verified)

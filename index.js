@@ -7,10 +7,13 @@ import buildingRouter from './src/routes/builgingRoutes.js'
 import roomRouter from './src/routes/roomRoutes.js'
 import tenantRouter from './src/routes/tenantRoutes.js'
 
+
+
 dotenv.config()
 const PORT = process.env.PORT
 
 const app = express()
+
 app.use(express.json())
 app.use(cors())
 app.use(registrationRouter)

@@ -28,13 +28,13 @@ buildingRepositary.get = async (token) => {
         })
         return result
     } catch (err) {
-        return err
+        return err  
     }
 }
 
 buildingRepositary.put = async (data) => {
     try {
-        const result = await Building.findByIdAndUpdate(data.id, data, { new: true, runValidators: true })
+        const result = await Building.findByIdAndUpdate(data._id, data, { new: true, runValidators: true })
         // console.log("here", result)
         return result
     } catch (err) {
